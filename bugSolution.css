@@ -1,0 +1,17 @@
+The solution involves refactoring the CSS to avoid unnecessary use of `!important` and ensure clear style prioritization.  Specificity is managed through a more organized and predictable approach:
+
+```css
+.parent {
+  color: blue;
+}
+
+.parent .child {
+  color: green; 
+}
+
+.child {
+  color: red; /* Removed !important */
+}
+```
+
+This revised CSS code leverages specificity rules effectively without relying on `!important`, resulting in the expected behavior and improved code maintainability.
